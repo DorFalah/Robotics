@@ -1,0 +1,188 @@
+{
+    "__class__": "Scene",
+    "obstacles": [
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -9,
+                    4
+                ],
+                [
+                    -8,
+                    4
+                ],
+                [
+                    -8,
+                    -9
+                ],
+                [
+                    8,
+                    -9
+                ],
+                [
+                    8,
+                    -10
+                ],
+                [
+                    -9,
+                    -10
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": "boundary"
+            }
+        },
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -9,
+                    4
+                ],
+                [
+                    -9,
+                    5
+                ],
+                [
+                    8,
+                    5
+                ],
+                [
+                    8,
+                    -9
+                ],
+                [
+                    7,
+                    -9
+                ],
+                [
+                    7,
+                    4
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": "boundary"
+            }
+        },
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -4,
+                    -2
+                ],
+                [
+                    2,
+                    -2
+                ],
+                [
+                    2,
+                    -6
+                ],
+                [
+                    -4,
+                    -6
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        },
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -8,
+                    -1
+                ],
+                [
+                    -8,
+                    1
+                ],
+                [
+                    7,
+                    1
+                ],
+                [
+                    7,
+                    -1
+                ],
+                [
+                    0, 
+                    -1
+                ],
+                [
+                    0,
+                    0
+                ],
+                [
+                    -1,
+                    0
+                ],
+                [
+                    -1,
+                    -1
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        }
+    ],
+    "robots": [
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.35,
+            "start": [
+                -2.5,
+                -1.5
+            ],
+            "end": [
+                1.5,
+                -1.5
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        },
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.35,
+            "start": [
+                1.5,
+                -1.5
+            ],
+            "end": [
+                -2.5,
+                -1.5
+            ],
+            "data": {
+                "color": "HSV 82,200,230",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        }
+    ],
+    "metadata": {
+        "version": "1.0.7",
+        "solvers": "",
+        "details": ""
+    }
+}

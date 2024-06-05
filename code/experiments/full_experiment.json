@@ -1,0 +1,373 @@
+{
+    "3 Discs Custom": {
+        "2000 Landmarks": {
+            "PRM": {
+                "avg time": 14.364651775360107,
+                "success rate": 0.2,
+                "avg distance": 74.85649226083419
+            },
+            "RRT": {
+                "avg time": 70.79416103363037,
+                "success rate": 1.0,
+                "avg distance": 280.5264076896731
+            },
+            "RRT*": {
+                "avg time": 334.73108928203584,
+                "success rate": 1.0,
+                "avg distance": 49.47560697046041
+            }
+        },
+        "3500 Landmarks": {
+            "PRM": {
+                "avg time": 23.357546472549437,
+                "success rate": 0.9,
+                "avg distance": 86.10256717174437
+            },
+            "RRT": {
+                "avg time": 97.14552850723267,
+                "success rate": 1.0,
+                "avg distance": 277.22783414363545
+            },
+            "RRT*": {
+                "avg time": 401.6056694984436,
+                "success rate": 1.0,
+                "avg distance": 48.08910734457246
+            }
+        },
+        "5000 Landmarks": {
+            "PRM": {
+                "avg time": 32.12077445983887,
+                "success rate": 0.8,
+                "avg distance": 73.0125260232726
+            },
+            "RRT": {
+                "avg time": 113.76554086208344,
+                "success rate": 1.0,
+                "avg distance": 272.40552666197124
+            },
+            "RRT*": {
+                "avg time": 474.87669270038606,
+                "success rate": 1.0,
+                "avg distance": 50.695842478814
+            }
+        }
+    },
+    "4 Robots": {
+        "2000 Landmarks": {
+            "PRM": {
+                "avg time": 15.924889826774598,
+                "success rate": 0.2,
+                "avg distance": 198.00030567066284
+            },
+            "RRT": {
+                "avg time": 98.66149325370789,
+                "success rate": 0.9,
+                "avg distance": 243.01232840034695
+            },
+            "RRT*": {
+                "avg time": 532.1118226766587,
+                "success rate": 0.8,
+                "avg distance": 81.10572864646925
+            }
+        },
+        "3500 Landmarks": {
+            "PRM": {
+                "avg time": 27.585362243652344,
+                "success rate": 0.5,
+                "avg distance": 76.57391264756703
+            },
+            "RRT": {
+                "avg time": 123.58010306358338,
+                "success rate": 0.9,
+                "avg distance": 269.30823514852887
+            },
+            "RRT*": {
+                "avg time": 573.7236808776855,
+                "success rate": 0.9,
+                "avg distance": 54.376522691912434
+            }
+        },
+        "5000 Landmarks": {
+            "PRM": {
+                "avg time": 36.72040996551514,
+                "success rate": 0.4,
+                "avg distance": 78.38320013139847
+            },
+            "RRT": {
+                "avg time": 141.2550070285797,
+                "success rate": 1.0,
+                "avg distance": 246.95226076577646
+            },
+            "RRT*": {
+                "avg time": 637.8323743343353,
+                "success rate": 1.0,
+                "avg distance": 54.03513532860122
+            }
+        }
+    },
+    "Hard Test 2 Robots": {
+        "2000 Landmarks": {
+            "PRM": {
+                "avg time": 13.64933159351349,
+                "success rate": 0.4,
+                "avg distance": 33.30169625418293
+            },
+            "RRT": {
+                "avg time": 43.7702431678772,
+                "success rate": 1.0,
+                "avg distance": 156.69579751427068
+            },
+            "RRT*": {
+                "avg time": 405.58635954856874,
+                "success rate": 1.0,
+                "avg distance": 17.129298455450535
+            }
+        },
+        "3500 Landmarks": {
+            "PRM": {
+                "avg time": 22.1422080039978,
+                "success rate": 0.2,
+                "avg distance": 55.78657368623586
+            },
+            "RRT": {
+                "avg time": 65.27656383514405,
+                "success rate": 1.0,
+                "avg distance": 133.40560391649362
+            },
+            "RRT*": {
+                "avg time": 447.25395276546476,
+                "success rate": 1.0,
+                "avg distance": 16.821966891628957
+            }
+        },
+        "5000 Landmarks": {
+            "PRM": {
+                "avg time": 31.29336099624634,
+                "success rate": 0.7,
+                "avg distance": 27.838859683141187
+            },
+            "RRT": {
+                "avg time": 76.27978444099426,
+                "success rate": 1.0,
+                "avg distance": 169.07103214081712
+            },
+            "RRT*": {
+                "avg time": 497.6095344543457,
+                "success rate": 1.0,
+                "avg distance": 15.676748838271928
+            }
+        }
+    },
+    "5 Robots": {
+        "2000 Landmarks": {
+            "PRM": {
+                "avg time": 15.22090482711792,
+                "success rate": 0.1,
+                "avg distance": 321.84336960507613
+            },
+            "RRT": {
+                "avg time": 108.02887258529663,
+                "success rate": 0.4,
+                "avg distance": 409.81863782725515
+            },
+            "RRT*": {
+                "avg time": 652.2384534597397,
+                "success rate": 0.5,
+                "avg distance": 67.26899954816217
+            }
+        },
+        "3500 Landmarks": {
+            "PRM": {
+                "avg time": 25.654143595695494,
+                "success rate": 0.1,
+                "avg distance": 89.72902666812391
+            },
+            "RRT": {
+                "avg time": 128.22298538684845,
+                "success rate": 1.0,
+                "avg distance": 475.52396883395323
+            },
+            "RRT*": {
+                "avg time": 703.178719997406,
+                "success rate": 0.8,
+                "avg distance": 73.03361468394942
+            }
+        },
+        "5000 Landmarks": {
+            "PRM": {
+                "avg time": 35.92456583976745,
+                "success rate": 0.3,
+                "avg distance": 94.18873077473035
+            },
+            "RRT": {
+                "avg time": 158.22735090255736,
+                "success rate": 0.9,
+                "avg distance": 442.0840569992684
+            },
+            "RRT*": {
+                "avg time": 723.9901350975036,
+                "success rate": 1.0,
+                "avg distance": 73.44664111194047
+            }
+        }
+    },
+    "3 Robots Hard Maze": {
+        "12500 Landmarks": {
+            "PRM": {
+                "avg time": 83.60887751579284,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 213.03976120948792,
+                "success rate": 0.5,
+                "avg distance": 491.139691567917
+            },
+            "RRT*": {
+                "avg time": 954.3370250463486,
+                "success rate": 0.7,
+                "avg distance": 161.65992885911928
+            }
+        },
+        "15000 Landmarks": {
+            "PRM": {
+                "avg time": 94.52686958312988,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 252.7119795560837,
+                "success rate": 0.4,
+                "avg distance": 605.4251975851311
+            },
+            "RRT*": {
+                "avg time": 1115.2255386590957,
+                "success rate": 0.7,
+                "avg distance": 165.78338284087545
+            }
+        },
+        "17500 Landmarks": {
+            "PRM": {
+                "avg time": 106.72694702148438,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 280.86690192222596,
+                "success rate": 0.7,
+                "avg distance": 477.9176678804385
+            },
+            "RRT*": {
+                "avg time": 1286.4864277124404,
+                "success rate": 0.7,
+                "avg distance": 169.9792212710171
+            }
+        }
+    },
+    "5 Robots Hard": {
+        "15000 Landmarks": {
+            "PRM": {
+                "avg time": 51.54605581760406,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 213.5708698272705,
+                "success rate": 0.3,
+                "avg distance": 367.7508396286689
+            },
+            "RRT*": {
+                "avg time": 566.9832806825638,
+                "success rate": 0.3,
+                "avg distance": 132.33882070696674
+            }
+        },
+        "17500 Landmarks": {
+            "PRM": {
+                "avg time": 68.983243227005,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 284.49605157375333,
+                "success rate": 0.3,
+                "avg distance": 331.86386989654835
+            },
+            "RRT*": {
+                "avg time": 750.1012964963913,
+                "success rate": 0.5,
+                "avg distance": 168.50319036281084
+            }
+        },
+        "20000 Landmarks": {
+            "PRM": {
+                "avg time": 71.43342156410218,
+                "success rate": 0.0,
+                "avg distance": 0.0
+            },
+            "RRT": {
+                "avg time": 302.7723819971085,
+                "success rate": 0.6,
+                "avg distance": 340.8904467537406
+            },
+            "RRT*": {
+                "avg time": 794.1627789974212,
+                "success rate": 0.6,
+                "avg distance": 154.6428145138356
+            }
+        }
+    },
+    "3 Discs custom #2": {
+        "2000 Landmarks": {
+            "PRM": {
+                "avg time": 15.482190656661988,
+                "success rate": 0.6,
+                "avg distance": 92.4599792892165
+            },
+            "RRT": {
+                "avg time": 70.6987291097641,
+                "success rate": 0.8,
+                "avg distance": 415.48320872870033
+            },
+            "RRT*": {
+                "avg time": 512.9842899799347,
+                "success rate": 0.9,
+                "avg distance": 75.99049727337571
+            }
+        },
+        "3500 Landmarks": {
+            "PRM": {
+                "avg time": 25.55259850025177,
+                "success rate": 0.9,
+                "avg distance": 92.8536252308976
+            },
+            "RRT": {
+                "avg time": 93.68835282325745,
+                "success rate": 1.0,
+                "avg distance": 459.1758785266801
+            },
+            "RRT*": {
+                "avg time": 558.403458404541,
+                "success rate": 1.0,
+                "avg distance": 75.36846869184885
+            }
+        },
+        "5000 Landmarks": {
+            "PRM": {
+                "avg time": 33.668647933006284,
+                "success rate": 1.0,
+                "avg distance": 90.57556902828728
+            },
+            "RRT": {
+                "avg time": 108.64534552097321,
+                "success rate": 0.9,
+                "avg distance": 437.224256149234
+            },
+            "RRT*": {
+                "avg time": 611.0069073915481,
+                "success rate": 0.9,
+                "avg distance": 79.43028272007321
+            }
+        }
+    }
+}

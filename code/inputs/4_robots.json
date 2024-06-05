@@ -1,0 +1,177 @@
+{
+    "__class__": "Scene",
+    "obstacles": [
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -9,
+                    4
+                ],
+                [
+                    -8,
+                    4
+                ],
+                [
+                    -8,
+                    -9
+                ],
+                [
+                    8,
+                    -9
+                ],
+                [
+                    8,
+                    -10
+                ],
+                [
+                    -9,
+                    -10
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": "boundary"
+            }
+        },
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -9,
+                    4
+                ],
+                [
+                    -9,
+                    5
+                ],
+                [
+                    8,
+                    5
+                ],
+                [
+                    8,
+                    -9
+                ],
+                [
+                    7,
+                    -9
+                ],
+                [
+                    7,
+                    4
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": "boundary"
+            }
+        },
+        {
+            "__class__": "ObstaclePolygon",
+            "poly": [
+                [
+                    -5,
+                    1
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    -0.5,
+                    -6
+                ]
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        }
+    ],
+    "robots": [
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.4,
+            "start": [
+                -6.5,
+                -5
+            ],
+            "end": [
+                5.5,
+                3
+            ],
+            "data": {
+                "color": "",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        },
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.4,
+            "start": [
+                4.6,
+                -5
+            ],
+            "end": [
+                -4,
+                3
+            ],
+            "data": {
+                "color": "HSV 119,200,230",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        },
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.4,
+            "start": [
+                -5.5,
+                -3
+            ],
+            "end": [
+                2,
+                3
+            ],
+            "data": {
+                "color": "HSV 308,200,230",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        },
+        {
+            "__class__": "RobotDisc",
+            "radius": 0.4,
+            "start": [
+                5.5,
+                2
+            ],
+            "end": [
+                -4,
+                -5
+            ],
+            "data": {
+                "color": "HSV 82,200,230",
+                "name": "",
+                "value": "",
+                "details": ""
+            }
+        }
+    ],
+    "metadata": {
+        "version": "1.0.7",
+        "solvers": "",
+        "details": ""
+    }
+}
