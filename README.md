@@ -12,7 +12,7 @@ The following Python files are included in this project:
 - `experiment.py`: Performs the experiments across different scenes and parameters, running each algorithm multiple times and collecting the results.
 The experiment runs *with threads* , the threads amount depends on how many scenes and landmarks you wish to test - 
 number of threads = num_of_scenes*len(landmarks)
-The list "landmarks" is defined in the code with default value of [2000, 3500, 5000].(For the scene "3 Robots Hard Maze" we use [12500, 15000, 17500])
+The list "landmarks" is defined in the code with default value of [2000, 3500, 5000].(For the scene "3 Robots Hard Maze" I used [12500, 15000, 17500] and for "5 Robots Hard" I used [15000, 17500, 20000])
 
 - `visualize_results.py`: Generates graphs to visualize the results of the experiments, making it easier to compare the performance of the algorithms.
 
