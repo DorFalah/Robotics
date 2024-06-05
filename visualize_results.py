@@ -44,18 +44,20 @@ def plotMetric(metric_data, metric_name):
             values = [lm_data[lm][method] for lm in experiment_results[scene].keys()]
             ax.bar(x + i * width, values, width, label=method)
 
-        title = ax.set_title(f'{metric_name}-{scene}',fontweight='bold')
+        title = ax.set_title(scene,fontweight='bold')
         title.set_position([0.32, 1.05])
         title.set_fontsize(10)
         ax.set_xticks(x + width)
         ax.set_xticklabels(list(experiment_results[scene].keys()),fontsize=8)
         if metric_name=="Average Distance":
             ax.set_ylim(0, 300)
-            tick_positions = range(0, 201, 50 )
+            tick_positions = range(0, 226, 75 )
             ax.set_yticks(tick_positions)
-        ax.legend()
-
-    fig.tight_layout()
+        else:
+            ax.set_ylim(0, 1)
+    
+    ax.legend(loc='upper left', bbox_to_anchor=(-0.13, 10))
+    fig.suptitle(metric_name,fontweight='bold',fontsize=16)
     fig.subplots_adjust(top=0.9, hspace=0.4) 
     plt.show()
     
