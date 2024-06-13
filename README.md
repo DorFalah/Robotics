@@ -28,7 +28,7 @@ Inside the folder there's another folder with all scenes images.
 ### 2. modules
 This folder includes the next python files:
 - `prm_solver.py`: Contains the implementation of the PRM algorithm which triggerd with the function PRMStart that callable from main.py.
-- `RRt_solver.py`: Contains the full implementation of the RRT and RRT* algorithms which triggerd with the function RRTStart that callable from main.py
+- `rrt_solver.py`: Contains the full implementation of the RRT and RRT* algorithms which triggerd with the function RRTStart that callable from main.py
 
 ### 3. experiments
 This folder includes the output json files that generated from experiment.py.
