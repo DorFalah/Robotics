@@ -1,2 +1,2 @@
 #discopygal-taucgl
-https://www.cgl.cs.tau.ac.il/wp-content/uploads/2024/02/discopygal_taucgl-1.0.7-py3-none-any.whl # disco
+https://www.cgl.cs.tau.ac.il/wp-content/uploads/2024/02/discopygal_taucgl-1.0.7-py3-none-any.whl
