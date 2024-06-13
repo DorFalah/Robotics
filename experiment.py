@@ -61,7 +61,8 @@ def runExperiment(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,st
 def startExperiment():
     
     def runSceneNLandmarks(sceneName,scenePath,n):
-
+        
+        global K
         print(f'{n} landmarks')
         totalTimePRM, totalTimeRRT, totalTimeRRTStar = 0, 0, 0
         succesPRM, successRRT, successRRTStar = 0, 0, 0
