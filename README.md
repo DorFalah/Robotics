@@ -44,10 +44,10 @@ Those file are used as input to visualize_results.py in order to visualize the g
 
     -scene: Path to the scene to run (required).
     --with-gui: Boolean for GUI option (0 or 1, default is 0 which means without GUI).
-    --num-landmarks: Number of landmarks to connect (default is 1000).
-    --k: Number of neighbors to connect with in knn to use with PRM solver (default is 15).
+    --num-landmarks: Number of landmarks to connect, MUST BE > 0 (default is 1000).
+    --k: Number of neighbors to connect with in knn to use with PRM solver, MUST BE > 0 (default is 15).
     --solver: Choose which solver to use (prm, rrt, default is prm).
-    --eta: Eta constant value to use with RRT solver (default is infinity, in that case, eta will be calculated according to the robots properties).
+    --eta: Eta constant value to use with RRT solver, MUST BE > 0 (default is infinity, in that case, eta will be calculated according to the robots properties).
     --star: Choose if you want to run the RRT* algorithm (0 or 1, default is 0 which means RRT).
     --output: Path of the output file(default is "output.txt")
 

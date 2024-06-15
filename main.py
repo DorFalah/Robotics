@@ -43,10 +43,17 @@ def parseJson(sceneName: str) -> tuple:
 
         return obstaclesData, robotData, metadata
 
+def validateInput(args):
+    assert args.num_landmarks > 0, "num_landmarks must be greater than 0"
+    assert args.k > 0, "k must be greater than 0"
+    assert args.eta > 0, "eta must be greater than 0"
+    
+
 def main():
     parser = initParser()
     args = parser.parse_args()
-
+    validateInput(args)
+    
     withGui = args.with_gui
     sceneName = args.scene
     numLandmarks = args.num_landmarks
