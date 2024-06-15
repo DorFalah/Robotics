@@ -68,9 +68,10 @@ def main():
     scene = Scene(obstacles=obstacles, robots=robot, metadata=metadata)
     if solver == "prm":
         CustomPRM.PRMStart(scene=scene, numLandmarks=numLandmarks, k=k, withGui=withGui,output=output)
-    if solver == "rrt":
+    elif solver == "rrt":
         RRTSolver.RRTStart(scene=scene, numLandmarks=numLandmarks, eta=eta, withGui=withGui,is_star=is_star,output=output)
-
+    else:
+        raise ValueError(f"Invalid solver value: '{solver}', must be 'prm' or 'rrt'")
 
 if __name__ == "__main__":
     rc = 1
