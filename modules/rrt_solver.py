@@ -16,7 +16,7 @@ from discopygal.geometry_utils import collision_detection
 verifyPaths = verify_paths.verify_paths
 
 RRTSTAR_FULL_ITERATION_LIMIT = 1000
-RRTSTAR_MODULU_FULL_ITERATION = 500
+RRTSTAR_MODULU_FULL_ITERATION = 100
 RRT_FULL_NEIGHBOR_SEARCH_LIMIT = 2000
 
 class RRTSolver(Solver.Solver):
@@ -303,7 +303,7 @@ class RRTSolver(Solver.Solver):
                     self.graph.add_edge(u_of_edge=nearestNeighbor, v_of_edge=ret, weight=RRTSolver.dist(p=nearestNeighbor, q=ret))
                     self.graph.add_edge(u_of_edge=ret, v_of_edge=nearestNeighbor, weight=RRTSolver.dist(p=nearestNeighbor, q=ret))
                 nodes_connected += 1
-                if nodes_connected%100==0:
+                if nodes_connected%RRTSTAR_MODULU_FULL_ITERATION==0:
                     print(f"{nodes_connected} landmarks connected")
                
     
@@ -329,7 +329,7 @@ class RRTSolver(Solver.Solver):
         log_n = int(math.log(n))
         shuffled_nodes = list(self.graph.nodes())
         random.shuffle(shuffled_nodes)
-        THETA = (log_n/self.numLandmarks)*n*(2**self.dim)
+        THETA = (log_n/self.numLandmarks)*n*(2**self.dim) # monotnic increasing function of n to calculate theta
         k = n if (n%RRTSTAR_MODULU_FULL_ITERATION==0 or n<=RRTSTAR_FULL_ITERATION_LIMIT) else 5*log_n
         for i in range(k): 
             d = RRTSolver.dist(shuffled_nodes[i], query)
