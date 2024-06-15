@@ -15,6 +15,9 @@ from discopygal.geometry_utils import collision_detection
 
 verifyPaths = verify_paths.verify_paths
 
+RRTSTAR_FULL_ITERATION_LIMIT = 1000
+RRTSTAR_MODULU_FULL_ITERATION = 500
+RRT_FULL_NEIGHBOR_SEARCH_LIMIT = 2000
 
 class RRTSolver(Solver.Solver):
     def __init__(self, numLandmarks: int, eta: float,is_star: int):
@@ -327,7 +330,7 @@ class RRTSolver(Solver.Solver):
         shuffled_nodes = list(self.graph.nodes())
         random.shuffle(shuffled_nodes)
         THETA = (log_n/self.numLandmarks)*n*(2**self.dim)
-        k = n if (n%500==0 or n<=700) else 5*log_n
+        k = n if (n%RRTSTAR_MODULU_FULL_ITERATION==0 or n<=RRTSTAR_FULL_ITERATION_LIMIT) else 5*log_n
         for i in range(k): 
             d = RRTSolver.dist(shuffled_nodes[i], query)
             if THETA > d:
@@ -397,7 +400,7 @@ class RRTSolver(Solver.Solver):
         
         random.shuffle(nodes)
         for i,node in enumerate(nodes):
-            if n>2000 and i>log_n:
+            if n>RRT_FULL_NEIGHBOR_SEARCH_LIMIT and i>log_n:
                 break
             d = RRTSolver.dist(node, query)
             if minDist > d:
