@@ -14,7 +14,7 @@ The experiment runs *with threads* , the threads amount depends on how many scen
 number of threads = num_of_scenes*len(landmarks)
 The list "landmarks" is defined in the code with default value of [2000, 3500, 5000].(For the scene "3 Robots Hard Maze" I used [12500, 15000, 17500] and for "5 Robots Hard" I used [15000, 17500, 20000])
 
-- `visualize_results.py`: Generates graphs to visualize the results of the experiments, making it easier to compare the performance of the algorithms.
+- `visualize_results.py`: Generates graphs to visualize the results of the experiments, making it easier to compare the performance of the algorithms.I've attached my full experiment graph results to my project report for your imperssion.
 
 
 ## Folders 
@@ -51,10 +51,14 @@ Those file are used as input to visualize_results.py in order to visualize the g
     --star: Choose if you want to run the RRT* algorithm (0 or 1, default is 0 which means RRT).
     --output: Path of the output file(default is "output.txt")
 
-    ### Example:
-    To run the main.py script with a scene file example.json, using the RRT* algorithm with a GUI, and 2000 landmarks:
+    ### Examples:
+    To run the main.py with the scene file 3_discs_custom.json inside the folder inputs, using RRT* algorithm with a GUI, and 2000 landmarks:
 
-    python3 main.py -scene example.json --with-gui 1 --num-landmarks 2000 --solver rrt --star 1
+    python3 main.py -scene inputs/3_discs_custom.json --with-gui 1 --num-landmarks 2000 --solver rrt --star 1
+
+    To run the same scene with PRM algorithm, without GUI, 2000 landmarks and k=20:
+
+    python3 main.py -scene inputs/3_discs_custom.json --num-landmarks 2000 --solver prm --k 20
 
 ### 2. experiment.py
     To run experiment.py use the following command:
