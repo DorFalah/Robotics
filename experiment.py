@@ -30,7 +30,11 @@ scenesMap = {
 }
 
 
-def runExperiment(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,star=0,K=K):
+def executeConfiguration(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,star=0,K=K):
+    """
+    Executes the given scene @scenePath with the given configuration: solver,numLandmarks, eta, star, k.
+    Returns a tuple of (total time took,scene score, boolean if the)
+    """
 
     score=0
     args = ["python3", "main.py",
@@ -59,9 +63,14 @@ def runExperiment(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,st
 
 
 def startExperiment():
+    """
+    Performs full experiment on all scenes
+    """
     
     def runSceneNLandmarks(sceneName,scenePath,n):
-        
+        """
+        Performs all algorithms on a given scene @sceneName with the given landmarks number @n
+        """
         global K
         print(f'{n} landmarks')
         totalTimePRM, totalTimeRRT, totalTimeRRTStar = 0, 0, 0
@@ -74,11 +83,11 @@ def startExperiment():
             
         for _ in range(LAPS):
             print('running PRM...')
-            tPRM, scorePRM, resPRM = runExperiment(scenePath=scenePath, solver='prm', numLandmarks=n,K=K)
+            tPRM, scorePRM, resPRM = executeConfiguration(scenePath=scenePath, solver='prm', numLandmarks=n,K=K)
             print('running RRT...')
-            tRRT, scoreRRT, resRRT = runExperiment(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta)
+            tRRT, scoreRRT, resRRT = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta)
             print('running RRT*...')
-            tRRTStar, scoreRRTStar, resRRTStar = runExperiment(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1)
+            tRRTStar, scoreRRTStar, resRRTStar = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1)
             
             totalTimePRM += tPRM
             totalTimeRRT += tRRT
@@ -113,6 +122,9 @@ def startExperiment():
         }
     
     def runScene(sceneName,scenePath):
+        """
+        Performs the experiment on a given scene
+        """
         print(f'\nRunning {sceneName}')
         
         numLandmarks = [2000, 3500, 5000]
