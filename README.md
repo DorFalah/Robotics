@@ -34,7 +34,7 @@ This folder includes the next python files:
 This folder includes the output json files that generated from experiment.py.
 Those file are used as input to visualize_results.py in order to visualize the given experiment result.
 
-## How to use?
+## How to run?
 
 ### 1. main.py
     To run main.py use the following command:
