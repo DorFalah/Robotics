@@ -1,5 +1,4 @@
-# Algorithmic Robotics and Motion Planning – Final Project - Dor Falah
-
+# Algorithmic Robotics and Motion Planning – Final Project
 This project compares three robot motion planning algorithms— PRM, RRT, and RRT*.
 The project includes implementations of each algorithm, performance evaluations, and visualization of the results.
 
