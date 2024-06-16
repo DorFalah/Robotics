@@ -8,6 +8,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-report', help='path to the report', required=True)
 args = parser.parse_args()
 report_path = args.report
+is_rrt_star_comparison = True if "rrt_star_comparison" in report_path else False
 
 with open(f'{report_path}', 'r') as file:
     experiment_results = json.load(file)
@@ -42,6 +43,8 @@ def plotMetric(metric_data, metric_name):
 
         for i, method in enumerate(methods):
             values = [lm_data[lm][method] for lm in experiment_results[scene].keys()]
+            if metric_name == "Average Time in Minutes":
+                values = [(value//60)+1 for value in values]
             ax.bar(x + i * width, values, width, label=method)
 
         title = ax.set_title(scene,fontweight='bold')
@@ -50,13 +53,28 @@ def plotMetric(metric_data, metric_name):
         ax.set_xticks(x + width)
         ax.set_xticklabels(list(experiment_results[scene].keys()),fontsize=8)
         if metric_name=="Average Distance":
-            ax.set_ylim(0, 300)
-            tick_positions = range(0, 226, 75 )
+            if is_rrt_star_comparison:
+                ax.set_ylim(0, 105)
+                tick_positions = range(0, 106, 15 )
+            else:
+                ax.set_ylim(0, 300)
+                tick_positions = range(0, 226, 75 ) 
+            ax.set_yticks(tick_positions)
+        elif metric_name == "Average Time in Minutes":
+            if is_rrt_star_comparison:
+                ax.set_ylim(0, 100)
+                tick_positions = range(0, 106, 15 )
+            else:
+                ax.set_ylim(0, 15)
+                tick_positions = range(0, 16, 3 )
             ax.set_yticks(tick_positions)
         else:
             ax.set_ylim(0, 1)
     
-    ax.legend(loc='upper left', bbox_to_anchor=(-0.13, 10))
+    if is_rrt_star_comparison:
+        ax.legend(loc='upper left', bbox_to_anchor=(0, 7.5))
+    else:
+        ax.legend(loc='upper left', bbox_to_anchor=(-0.13, 10))        
     fig.suptitle(metric_name,fontweight='bold',fontsize=16)
     fig.subplots_adjust(top=0.9, hspace=0.4) 
     plt.show()
@@ -66,3 +84,5 @@ if __name__ == "__main__":
     loadResultsToDicts()
     plotMetric(success_rate, 'Success Rate')
     plotMetric(avg_distance, 'Average Distance')
+    if is_rrt_star_comparison:
+        plotMetric(avg_time, 'Average Time in Minutes')
