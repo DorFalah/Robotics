@@ -78,10 +78,10 @@ def main():
         raise ValueError(f"Invalid solver value: '{solver}', must be 'prm' or 'rrt'")
 
 if __name__ == "__main__":
-    rc = 1
+    rc = 0
     try:
         main()
-        rc = 0
     except Exception as e:
         print('Error: %s' % e, file=sys.stderr)
+        rc = 1
     sys.exit(rc)
