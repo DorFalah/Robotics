@@ -18,7 +18,7 @@ verifyPaths = verify_paths.verify_paths
 RRTSTAR_FULL_ITERATION_LIMIT = 1000
 RRTSTAR_MODULU_FULL_ITERATION = 100
 RRT_FULL_NEIGHBOR_SEARCH_LIMIT = 2000
-NO_PATH = "No path found"
+NO_PATH = "No path found\n"
 
 class RRTSolver(Solver.Solver):
     def __init__(self, numLandmarks: int, eta: float,is_star: int):
