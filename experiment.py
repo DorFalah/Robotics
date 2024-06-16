@@ -85,11 +85,11 @@ def startExperiment():
             
         for _ in range(LAPS):
             print('running PRM...')
-            tPRM, scorePRM, resPRM = executeConfiguration(scenePath=scenePath, solver='prm', numLandmarks=n,K=K,output_path=f"PRM_{sceneName}_{n}")
+            tPRM, scorePRM, resPRM = executeConfiguration(scenePath=scenePath, solver='prm', numLandmarks=n,K=K,output_path=f"PRM_{sceneName.replace(" ", "_")}_{n}")
             print('running RRT...')
-            tRRT, scoreRRT, resRRT = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,output_path=f"RRT_{sceneName}_{n}")
+            tRRT, scoreRRT, resRRT = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,output_path=f"RRT_{sceneName.replace(" ", "_")}_{n}")
             print('running RRT*...')
-            tRRTStar, scoreRRTStar, resRRTStar = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1,output_path=f"RRTstar_{sceneName}_{n}")
+            tRRTStar, scoreRRTStar, resRRTStar = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1,output_path=f"RRTstar_{sceneName.replace(" ", "_")}_{n}")
             
             totalTimePRM += tPRM
             totalTimeRRT += tRRT
