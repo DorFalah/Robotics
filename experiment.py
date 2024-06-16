@@ -30,7 +30,7 @@ scenesMap = {
 }
 
 
-def executeConfiguration(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,star=0,K=K):
+def executeConfiguration(scenePath: str, solver: str, numLandmarks: int,eta=math.inf,star=0,K=K,output_path='output.txt'):
     """
     Executes the given scene @scenePath with the given configuration: solver,numLandmarks, eta, star, k.
     Returns a tuple of (total time took,scene score, boolean if the)
@@ -43,7 +43,8 @@ def executeConfiguration(scenePath: str, solver: str, numLandmarks: int,eta=math
             "--num-landmarks", str(numLandmarks),
             "--k", str(K),
             "--solver", solver,
-            "--star", str(star)]
+            "--star", str(star),
+            "--output", output_path]
     if eta != math.inf:
         args.extend(["--eta", str(eta)])
         
@@ -53,12 +54,13 @@ def executeConfiguration(scenePath: str, solver: str, numLandmarks: int,eta=math
     subprocess.run(args)
     end = time.time()
     
-    with open('output.txt', 'r') as output:
+    with open(output_path, 'r') as output:
         lines = output.readlines()
         SUCCEED = 'No path found' not in lines[0]
         if SUCCEED:
             _, score = lines[-1].split()
     total = end - start
+    os.remove(output_path)
     return total, float(score), SUCCEED
 
 
@@ -83,11 +85,11 @@ def startExperiment():
             
         for _ in range(LAPS):
             print('running PRM...')
-            tPRM, scorePRM, resPRM = executeConfiguration(scenePath=scenePath, solver='prm', numLandmarks=n,K=K)
+            tPRM, scorePRM, resPRM = executeConfiguration(scenePath=scenePath, solver='prm', numLandmarks=n,K=K,output_path=f"PRM_{sceneName}_{n}")
             print('running RRT...')
-            tRRT, scoreRRT, resRRT = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta)
+            tRRT, scoreRRT, resRRT = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,output_path=f"RRT_{sceneName}_{n}")
             print('running RRT*...')
-            tRRTStar, scoreRRTStar, resRRTStar = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1)
+            tRRTStar, scoreRRTStar, resRRTStar = executeConfiguration(scenePath=scenePath, solver='rrt', numLandmarks=n,eta=eta,star=1,output_path=f"RRTstar_{sceneName}_{n}")
             
             totalTimePRM += tPRM
             totalTimeRRT += tRRT
