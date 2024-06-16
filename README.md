@@ -70,7 +70,7 @@ Those file are used as input to visualize_results.py in order to visualize the g
     --laps: Number of laps per scene & landmarks to test (default is 5).
 
     ### Example:
-    To run experiment.py with 10 laps per scene & landmarks and save output to a file named experiment_results:
+    To run experiment.py with 10 laps per scene & landmarks and save the report in the path experiments/experiment_results.json:
 
     python3 experiment.py --output experiment_results --laps 10
 
