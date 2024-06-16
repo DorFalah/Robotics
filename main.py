@@ -27,7 +27,7 @@ def initParser():
     parser.add_argument('--eta', help="Eta const value to use with rrt solver", type=float, default=math.inf)
     parser.add_argument('--star', help="Choose if you want to run rrt* algorithm", type=int, default=0)
     parser.add_argument('--output', help="Path of the output file", type=str, default="output.txt")
-    parser.add_argument('-v', '--verbose', help='enable debug mode',action='store_true')
+    parser.add_argument('-v', '--verbose', help='enable debug mode')
     return parser
 
 def parseJson(sceneName: str) -> tuple:
