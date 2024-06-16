@@ -57,9 +57,9 @@ Those file are used as input to visualize_results.py in order to visualize the g
 
     python3 main.py -scene inputs/3_discs_custom.json --with-gui 1 --num-landmarks 2000 --solver rrt --star 1 --output 3_discs.txt
 
-    b. To run the same scene with PRM algorithm, without GUI, 2000 landmarks and k=20:
+    b. To run the same scene with PRM algorithm, without GUI, 2000 landmarks, k=20, and in debug mode:
 
-    python3 main.py -scene inputs/3_discs_custom.json --num-landmarks 2000 --solver prm --k 20
+    python3 main.py -scene inputs/3_discs_custom.json --num-landmarks 2000 --solver prm --k 20 -v
 
 ### 2. experiment.py
     To run experiment.py use the following command:
