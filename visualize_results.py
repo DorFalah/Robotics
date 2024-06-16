@@ -63,7 +63,7 @@ def plotMetric(metric_data, metric_name):
         elif metric_name == "Average Time in Minutes":
             if is_rrt_star_comparison:
                 ax.set_ylim(0, 100)
-                tick_positions = range(0, 106, 15 )
+                tick_positions = range(0, 101, 20 )
             else:
                 ax.set_ylim(0, 15)
                 tick_positions = range(0, 16, 3 )

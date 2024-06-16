@@ -1,36 +1,36 @@
 {
     "3 Discs Custom": {
         "2000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 1260.9979457855225,
                 "success rate": 1.0,
                 "avg distance": 41.36495775543761
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 334.73108928203584,
                 "success rate": 1.0,
                 "avg distance": 49.47560697046041
             }
         },
         "3500 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 3269.9886172771453,
                 "success rate": 1.0,
                 "avg distance": 39.610111899544904
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 401.6056694984436,
                 "success rate": 1.0,
                 "avg distance": 48.08910734457246
             }
         },
         "5000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 5618.793103122711,
                 "success rate": 1.0,
                 "avg distance": 38.72878480899808
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 474.87669270038606,
                 "success rate": 1.0,
                 "avg distance": 50.695842478814
@@ -39,36 +39,36 @@
     },
     "4 Robots": {
         "2000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 1572.9043461799622,
                 "success rate": 1.0,
                 "avg distance": 44.63479461712236
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 532.1118226766587,
                 "success rate": 0.8,
                 "avg distance": 81.10572864646925
             }
         },
         "3500 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 3896.4463172912597,
                 "success rate": 0.8,
                 "avg distance": 41.592283536493966
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 573.7236808776855,
                 "success rate": 0.9,
                 "avg distance": 54.376522691912434
             }
         },
         "5000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 6540.263479375839,
                 "success rate": 1.0,
                 "avg distance": 41.13692655146182
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 637.8323743343353,
                 "success rate": 1.0,
                 "avg distance": 54.03513532860122
@@ -77,36 +77,36 @@
     },
     "Hard Test 2 Robots": {
         "2000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 1551.0004650592805,
                 "success rate": 1.0,
                 "avg distance": 17.212576883403848
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 405.58635954856874,
                 "success rate": 1.0,
                 "avg distance": 17.129298455450535
             }
         },
         "3500 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 4075.51042675972,
                 "success rate": 1.0,
                 "avg distance": 13.667111822523509
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 447.25395276546476,
                 "success rate": 1.0,
                 "avg distance": 16.821966891628957
             }
         },
         "5000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 7018.019246149063,
                 "success rate": 1.0,
                 "avg distance": 10.227520614540015
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 497.6095344543457,
                 "success rate": 1.0,
                 "avg distance": 15.676748838271928
@@ -115,36 +115,36 @@
     },
     "5 Robots": {
         "2000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 1860.6760899543763,
                 "success rate": 0.6,
                 "avg distance": 61.156286686198435
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 652.2384534597397,
                 "success rate": 0.5,
                 "avg distance": 67.26899954816217
             }
         },
         "3500 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 4055.3799182891844,
                 "success rate": 0.6,
                 "avg distance": 53.734195239118435
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 703.178719997406,
                 "success rate": 0.8,
                 "avg distance": 73.03361468394942
             }
         },
         "5000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 6803.956499528885,
                 "success rate": 1.0,
                 "avg distance": 52.02538662031899
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 723.9901350975036,
                 "success rate": 1.0,
                 "avg distance": 73.44664111194047
@@ -153,36 +153,36 @@
     },
     "3 Discs custom #2": {
         "2000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 1904.027704811096,
                 "success rate": 1.0,
                 "avg distance": 63.80102823487613
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 512.9842899799347,
                 "success rate": 0.9,
                 "avg distance": 75.99049727337571
             }
         },
         "3500 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 4825.6013945579525,
                 "success rate": 1.0,
                 "avg distance": 63.77692157802628
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 558.403458404541,
                 "success rate": 1.0,
                 "avg distance": 75.36846869184885
             }
         },
         "5000 Landmarks": {
-            "RRT*": {
+            "Full RRT*": {
                 "avg time": 8720.345503664017,
                 "success rate": 1.0,
                 "avg distance": 61.67798120252631
             },
-            "RRT* Custom": {
+            "My RRT*": {
                 "avg time": 611.0069073915481,
                 "success rate": 0.9,
                 "avg distance": 79.43028272007321
