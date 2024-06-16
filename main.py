@@ -71,9 +71,9 @@ def main():
     obstacles, robot, metadata = parseJson(sceneName=sceneName)
     scene = Scene(obstacles=obstacles, robots=robot, metadata=metadata)
     if solver == "prm":
-        CustomPRM.PRMStart(scene=scene, numLandmarks=numLandmarks, k=k, withGui=withGui,output=output)
+        CustomPRM.PRMStart(scene=scene, numLandmarks=numLandmarks, k=k, withGui=withGui,output=output,verbose=verbose)
     elif solver == "rrt":
-        RRTSolver.RRTStart(scene=scene, numLandmarks=numLandmarks, eta=eta, withGui=withGui,is_star=is_star,output=output)
+        RRTSolver.RRTStart(scene=scene, numLandmarks=numLandmarks, eta=eta, withGui=withGui,is_star=is_star,output=output,verbose=verbose)
     else:
         raise ValueError(f"Invalid solver value: '{solver}', must be 'prm' or 'rrt'")
 

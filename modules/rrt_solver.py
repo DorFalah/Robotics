@@ -21,13 +21,14 @@ RRT_FULL_NEIGHBOR_SEARCH_LIMIT = 2000
 NO_PATH = "No path found\n"
 
 class RRTSolver(Solver.Solver):
-    def __init__(self, numLandmarks: int, eta: float,is_star: int):
+    def __init__(self, numLandmarks: int, eta: float,is_star: int,verbose:bool):
         super().__init__(bounding_margin_width_factor=Solver.Solver.DEFAULT_BOUNDS_MARGIN_FACTOR)
         self.collision_detection = {}
         self.numLandmarks = numLandmarks
         self.eta = eta
         self.is_star = is_star
         self.cost = 0
+        self.verbose = verbose
     
 
     def load_scene(self, scene: Scene):
@@ -304,7 +305,7 @@ class RRTSolver(Solver.Solver):
                     self.graph.add_edge(u_of_edge=nearestNeighbor, v_of_edge=ret, weight=RRTSolver.dist(p=nearestNeighbor, q=ret))
                     self.graph.add_edge(u_of_edge=ret, v_of_edge=nearestNeighbor, weight=RRTSolver.dist(p=nearestNeighbor, q=ret))
                 nodes_connected += 1
-                if nodes_connected%RRTSTAR_MODULU_FULL_ITERATION==0:
+                if nodes_connected%RRTSTAR_MODULU_FULL_ITERATION==0 and self.verbose:
                     print(f"{nodes_connected} landmarks connected")
                
     
@@ -551,7 +552,7 @@ class RRTSolver(Solver.Solver):
         return {'numLandmarks': ('numLandmarks', 3000, int), 'eta': ('eta', 10, float),'is_star': ('is_star', 0 , int)}
 
     @staticmethod
-    def RRTStart(scene: Scene, numLandmarks: int, eta: float, withGui: bool,is_star=0,output="output.txt"):
+    def RRTStart(scene: Scene, numLandmarks: int, eta: float, withGui: bool,is_star=0,output="output.txt",verbose=False):
         """
         Runs the RRT (Rapidly-exploring Random Tree) algorithm for path planning in a given scene
 
@@ -571,7 +572,7 @@ class RRTSolver(Solver.Solver):
                 if 5*robot.radius.to_double() <eta:
                     eta = 5*robot.radius.to_double()
         
-        solver = RRTSolver(numLandmarks=numLandmarks, eta=eta,is_star=is_star)
+        solver = RRTSolver(numLandmarks=numLandmarks, eta=eta,is_star=is_star,verbose=verbose)
         solver.load_scene(scene=scene)
         
         # solve scene

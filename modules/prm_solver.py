@@ -24,7 +24,7 @@ class CustomPRM(PRM):
         super().__init__(num_landmarks, k, bounding_margin_width_factor)
 
 
-    def load_scene(self, scene: Scene):
+    def load_scene(self, scene: Scene,verbose: bool):
         """
         Loads the specified scene into the environment
 
@@ -68,7 +68,7 @@ class CustomPRM(PRM):
                 if self.collision_free(neighbor, point):
                     self.roadmap.add_edge(point, neighbor, weight=CustomPRM.customDist(point, neighbor))
 
-            if cnt % 100 == 0:
+            if verbose and cnt % 100 == 0:
                 print('connected', cnt, 'landmarks to their nearest neighbors')
     
     def solve(self):
@@ -115,7 +115,7 @@ class CustomPRM(PRM):
         return distance**0.5
 
     @staticmethod
-    def PRMStart(scene: Scene, numLandmarks: int, k: int, withGui: bool,output="output.txt"):
+    def PRMStart(scene: Scene, numLandmarks: int, k: int, withGui: bool,output="output.txt",verbose=False):
         """
         Runs the PRM algorithm for path planning in a given scene
 
@@ -132,7 +132,7 @@ class CustomPRM(PRM):
                 # Start solver_viewer with the scene and solver objects (the scene isn't solved yet)
                 startGui(scene=scene, solver=basicPRMSolver)
                 return
-        basicPRMSolver.load_scene(scene=scene)
+        basicPRMSolver.load_scene(scene=scene,verbose)
         path = basicPRMSolver.solve()
         result, _ = verifyPaths(scene=scene, paths=path)
         with open(output, 'w') as f:
