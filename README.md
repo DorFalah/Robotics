@@ -54,7 +54,7 @@ Those file are used as input to visualize_results.py in order to visualize the g
     ### Examples:
     a. To run the main.py with the scene file 3_discs_custom.json inside the folder inputs, using RRT* algorithm with a GUI, 2000 landmarks, and save output to 3_discs.txt:
 
-    python3 main.py -scene inputs/3_discs_custom.json --with-gui 1 --num-landmarks 2000 --solver rrt --star 1 --output 3_discs
+    python3 main.py -scene inputs/3_discs_custom.json --with-gui 1 --num-landmarks 2000 --solver rrt --star 1 --output 3_discs.txt
 
     b. To run the same scene with PRM algorithm, without GUI, 2000 landmarks and k=20:
 
