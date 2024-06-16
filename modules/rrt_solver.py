@@ -80,7 +80,8 @@ class RRTSolver(Solver.Solver):
 
         self.buildGraph()
         if target not in self.graph.nodes():
-            print(f"Connecting target to the graph")
+            if self.verbose:
+                print(f"Connecting target to the graph")
             if not self.connectTargetToGraph(target=target):
                 print(f"Failed")
                 return None
