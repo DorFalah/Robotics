@@ -78,3 +78,8 @@ Those file are used as input to visualize_results.py in order to visualize the g
     pytho3 visualize_results.py -report <path_to_report>
 
     -report: Path to the report file which generated from experiment.py (required).
+
+    ### Example:
+    To run visualize_results.py with the experiment output file experiments/full_experiment.json:
+
+    python3 visualize_results.py -report experiments/full_experiment.json 
