@@ -132,7 +132,7 @@ class CustomPRM(PRM):
                 # Start solver_viewer with the scene and solver objects (the scene isn't solved yet)
                 startGui(scene=scene, solver=basicPRMSolver)
                 return
-        basicPRMSolver.load_scene(scene=scene,verbose)
+        basicPRMSolver.load_scene(scene=scene,verbose=verbose)
         path = basicPRMSolver.solve()
         result, _ = verifyPaths(scene=scene, paths=path)
         with open(output, 'w') as f:
