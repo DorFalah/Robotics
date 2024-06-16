@@ -64,6 +64,8 @@ def main():
     is_star = args.star
     output = args.output
     verbose = args.verbose
+    if verbose:
+        print("DEBUG MODE")
     
     # configure scene and solver
     obstacles, robot, metadata = parseJson(sceneName=sceneName)
