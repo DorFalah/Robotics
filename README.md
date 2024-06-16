@@ -12,6 +12,7 @@ The following Python files are included in this project:
 The experiment runs *with threads* , the threads amount depends on how many scenes and landmarks you wish to test - 
 number of threads = num_of_scenes*len(landmarks)
 The list "landmarks" is defined in the code with default value of [2000, 3500, 5000].(For the scene "3 Robots Hard Maze" I used [12500, 15000, 17500] and for "5 Robots Hard" I used [15000, 17500, 20000])
+The output file is generated inside the folder experiments
 
 - `visualize_results.py`: Generates graphs to visualize the results of the experiments, making it easier to compare the performance of the algorithms.I've attached my full experiment graph results to my project report for your imperssion.
 
@@ -49,6 +50,7 @@ Those file are used as input to visualize_results.py in order to visualize the g
     --eta: Eta constant value to use with RRT solver, MUST BE > 0 (default is infinity, in that case, eta will be calculated according to the robots properties).
     --star: Choose if you want to run the RRT* algorithm (0 or 1, default is 0 which means RRT).
     --output: Path of the output file(default is "output.txt")
+    -v --verbose: flag for debugging mode
 
     ### Examples:
     a. To run the main.py with the scene file 3_discs_custom.json inside the folder inputs, using RRT* algorithm with a GUI, 2000 landmarks, and save output to 3_discs.txt:
@@ -70,7 +72,7 @@ Those file are used as input to visualize_results.py in order to visualize the g
     ### Example:
     To run experiment.py with 10 laps per scene & landmarks and save output to a file named experiment_results:
 
-    python3 experiment.py -output experiment_results --laps 10
+    python3 experiment.py --output experiment_results --laps 10
 
 ### 3. visualize_results.py
     To run visualize_results.py use the following command:
