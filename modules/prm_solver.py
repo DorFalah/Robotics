@@ -138,7 +138,7 @@ class CustomPRM(PRM):
         with open(output, 'w') as f:
             if not result:
                 print(f"\nPRM didn\'t find valid path")
-                f.write(f"No path found")
+                f.write(f"No path found\n")
             else:
                 robots_points = [path.paths[robot].points for robot in scene.robots]
                 path_list=[]
